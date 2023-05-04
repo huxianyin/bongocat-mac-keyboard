@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Layouts;
+// using AppEventMonitor;
 
 namespace BongoCatUnity
 {
@@ -33,7 +34,27 @@ namespace BongoCatUnity
         {
             _inputControl = InputSystem.FindControl(Path);
         }
+        // void Start(){
+        //     AppEventMonitorManager.OnKeyDown += OnKeyDown;
+        //     //AppEventMonitorManager.OnKeyUp += OnKeyUp;
+        // }
 
+        // void OnKeyDown(string key){
+        //     Debug.Log(key);
+        //     if(!string.Equals(string.Concat("<Keyboard>/",key), Path)) return;
+        //     Released.SetActive(false);
+        //     Pressed.SetActive(true);
+        //     HandController.handPos = transform.position;
+        //     HandController.handDown = _inputControl.IsPressed();
+
+        // }
+        
+        // void OnKeyUp(string key){
+        //     if(!string.Equals(string.Concat("<Keyboard>/",key), Path)) return;
+        //     Released.SetActive(true);
+        //     Pressed.SetActive(false);
+
+        // }
         private void Update()
         {
             if (_inputControl is not null)
