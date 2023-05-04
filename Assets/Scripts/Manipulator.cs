@@ -40,12 +40,7 @@ namespace BongoCatUnity
         private void Update()
         {
             var mouse = UnityEngine.InputSystem.Mouse.current;
-            var gamepad = UnityEngine.InputSystem.Gamepad.current;
-            
-            // Debug.Log($"{UnityEngine.InputSystem.Mouse.current.position.ReadValue()} {mouse.leftButton.isPressed} {mouse.leftButton.wasPressedThisFrame}");
-            
-            Debug.Log($"{gamepad.leftStick.ReadValue()} {gamepad.buttonNorth.wasPressedThisFrame}");
-            
+            var keyboard = UnityEngine.InputSystem.Keyboard.current;
             if (mouseHover && Input.mouseScrollDelta.y != 0)
             {
                 transform.localScale *= 1 + scaleFactor * Mathf.Sign(Input.mouseScrollDelta.y);

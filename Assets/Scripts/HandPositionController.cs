@@ -40,7 +40,7 @@ namespace BongoCatUnity
         public void SetPos(Vector2 pos)
         {
             var pointPos = _shapeController.spline.GetPosition(pointIndex);
-            Debug.Log($"{pointPos}, {_shapeController.spline.GetPosition(0)}");
+            //Debug.Log($"{pointPos}, {_shapeController.spline.GetPosition(0)}");
             _shapeController.spline.SetPosition(pointIndex, _shapeController.transform.worldToLocalMatrix.MultiplyPoint(pos.ToVector3(0)).Set(z:0));
         }
 
